@@ -64,12 +64,9 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the KDE Desktop Environment.
-  services.displayManager.sddm ={
-    enable = true;
-    wayland.enable = true;
-  };
-  services.desktopManager.plasma6.enable = true;
+  # Enable the Gnome Desktop Environment.
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   systemd.tmpfiles.rules = [
     "L /run/gdm/.config/monitors.xml - - - - ${./monitors.xml}"
@@ -133,6 +130,7 @@
     curl
     git
     xsettingsd
+    gnome-tweaks
   ];
   fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   #  fonts.packages = with pkgs; [
