@@ -20,7 +20,7 @@
     nil
     rustup
     stremio
-    gnome-tweaks
+    libsecret
   ];
   programs.fish = {
     enable = true;
@@ -33,6 +33,9 @@
     enable = true;
     userName = "entitygit";
     userEmail = "98179520+entitygit@users.noreply.github.com";
+    config = {
+      credential.helper = "libsecret";
+    };
   };
 
   home.file.".config/monitors.xml".text = ''
