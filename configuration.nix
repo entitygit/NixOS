@@ -68,6 +68,10 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  systemd.tmpfiles.rules = [
+    "L /run/gdm/.config/monitors.xml - - - - ${./monitors.xml}"
+  ];
+  
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
