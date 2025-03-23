@@ -25,7 +25,7 @@
   programs.git = {
     enable = true;
     userName = "entitygit";
-    userEmail = "linus.luke07@gmail.com";
+    userEmail = "98179520+entitygit@users.noreply.github.com";
   };
 
   home.file.".config/monitors.xml".text = ''
