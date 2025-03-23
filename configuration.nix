@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
     ];
   
-  boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -144,7 +144,7 @@
   # programs.gnupg.agent = {
   #   enable = true;
   #   enableSSHSupport = true;
-  # };
+  # ;
 
   # List services that you want to enable:
 
