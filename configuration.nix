@@ -129,6 +129,7 @@
     appimage-run
     curl
     git
+    xsettingsd
   ];
   fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   #  fonts.packages = with pkgs; [
