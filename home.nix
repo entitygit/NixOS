@@ -20,7 +20,6 @@
     nil
     rustup
     stremio
-    git-credential-oauth
   ];
   programs.fish = {
     enable = true;
@@ -31,9 +30,13 @@
 
   programs.git = {
     enable = true;
-    credential-oauth.enable = true;
     userName = "entitygit";
     userEmail = "98179520+entitygit@users.noreply.github.com";
+  };
+
+  programs.git-credential-oauth = {
+    enable = true;
+    package = pkgs.libsecret;
   };
 
   home.file.".config/monitors.xml".text = ''
