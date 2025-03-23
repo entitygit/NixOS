@@ -33,9 +33,6 @@
     enable = true;
     userName = "entitygit";
     userEmail = "98179520+entitygit@users.noreply.github.com";
-    config = {
-      credential.helper = "git-credential-oauth";
-    };
   };
 
   home.file.".config/monitors.xml".text = ''
