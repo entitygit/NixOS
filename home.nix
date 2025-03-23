@@ -4,13 +4,6 @@
   home.username = "linus";
   home.homeDirectory = "/home/linus";
 
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 26;
-  };
-
   home.packages = with pkgs; [
     fastfetch
     vesktop
