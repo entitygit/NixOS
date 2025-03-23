@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
     ];
   
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
