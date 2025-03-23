@@ -31,6 +31,7 @@
 
   programs.git = {
     enable = true;
+    credential-oauth.enable = true;
     userName = "entitygit";
     userEmail = "98179520+entitygit@users.noreply.github.com";
   };
