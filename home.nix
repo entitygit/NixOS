@@ -32,12 +32,6 @@
     enable = true;
     userName = "entitygit";
     userEmail = "98179520+entitygit@users.noreply.github.com";
-    extraConfig = {
-      credential = {
-        credentialStore = "secretservice";
-        helper = pkgs.git-credential-manager;
-      };
-    };
   };
 
   home.file.".config/monitors.xml".text = ''
